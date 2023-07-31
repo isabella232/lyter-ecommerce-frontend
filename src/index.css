@@ -1,69 +1,137 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  margin: 0px;
+  padding: 0px;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+/* <Header/> Styles */
+.header-container {
+  font-family: "Libre Franklin", sans-serif;
+  color: #4d4d4d;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.header-top-bar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.header-logo-img {
+  width: 100px;
+  flex-shrink: 0;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.coupon-text {
+  font-size: 15px;
+  margin-top: 10px;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.header-searchbar {
+  width: 50%;
+}
+.header-searchbar-input {
+  flex-grow: 2;
+  border: 2px solid #838383;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  box-sizing: border-box;
+  user-select: auto;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+  outline: none; /*Fixes small little gap around outside edge*/
+  font-family: "Libre Franklin", sans-serif;
+}
+.header-searchbar-input:focus {
+  border: 2px solid #000000;
+  background-color: white;
+  box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.17);
+}
+.header-searchbar-input:focus::placeholder {
+  color: transparent; /*Makes search placeholder disappear when someone focuses it.*/
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.header-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.account-icon-img {
+  width: 40px;
+  cursor: pointer;
+}
+.sign-in-text {
+  cursor: pointer;
+}
+
+.shopping-bag-img {
+  width: 40px;
+  cursor: pointer;
+}
+.header-bottom-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.category-container {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  padding: 4px;
+}
+.category-container:hover {
+  transform: scale(1.1);
+  background-color: rgb(243, 243, 243);
+  padding: 4px;
+  border-radius: 8px;
+}
+.category-img {
+  width: 50px;
+}
+
+/* <Home /> Styles */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <WeeklySpecials/> Styles */
+
+.weekly-special-container {
+  margin-top: 40px;
+  max-width: 800px;
+}
+
+.weekly-special-img {
+  width: 100%;
 }
