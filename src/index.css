@@ -137,6 +137,10 @@ a {
   justify-content: center;
   align-items: center;
 }
+.cards-container-text-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 /* <WeeklySpecials/> Styles */
 
@@ -186,6 +190,11 @@ a {
 .card-bottom-container {
   font-family: "Spline Sans", sans-serif;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .card-img {
   width: 70%;
@@ -222,6 +231,7 @@ a {
   color: black;
   background-color: transparent;
   height: 48px;
+  width: 180px;
 }
 .add-to-cart-btn:hover {
   color: white;
@@ -252,7 +262,7 @@ a {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 800;
   text-align: center;
-  margin-top: 40px;
+  padding-top: 80px;
   padding-bottom: 80px;
   display: flex;
   justify-content: center;

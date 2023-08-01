@@ -6,7 +6,7 @@ export default function BabyCare({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="baby-care-page-container category-page-container">
         <div className="baby-care-title catchphrase">
-          Your baby deserves the&nbsp; <u>best</u>.&nbsp;
+          Your baby deserves the&nbsp;<u>best</u>.
         </div>
       </div>
       <div className="baby-care-items category-items">

@@ -6,7 +6,7 @@ export default function Fruits({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="fruits-page-container category-page-container">
         <div className="fruits-title catchphrase">
-          Nothing gets you going like &nbsp; <u>fresh</u> &nbsp; fruit.
+          Nothing gets you going like&nbsp;<u>fresh</u>&nbsp;fruit.
         </div>
       </div>
       <div className="fruits-items category-items">

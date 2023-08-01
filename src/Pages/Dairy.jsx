@@ -6,7 +6,7 @@ export default function Dairy({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="dairy-page-container category-page-container">
         <div className="dairy-title catchphrase">
-          Delicious dairy products you &nbsp; <u>love</u>!
+          Delicious dairy products you &nbsp;<u>love</u>!
         </div>
       </div>
       <div className="dairy-items category-items">

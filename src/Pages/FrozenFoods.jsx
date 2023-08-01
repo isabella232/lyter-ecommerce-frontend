@@ -6,7 +6,7 @@ export default function FrozenFoods({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="frozen-foods-page-container category-page-container">
         <div className="frozen-foods-title catchphrase">
-          Easy to eat, &nbsp; <u>delicious</u> &nbsp;frozen food!
+          Easy to eat,&nbsp;<u>delicious</u>&nbsp;frozen food!
         </div>
       </div>
       <div className="frozen-foods-items category-items">

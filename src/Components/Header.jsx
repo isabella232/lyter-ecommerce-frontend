@@ -4,9 +4,11 @@ export default function Header() {
   return (
     <div className="header-container">
       <div className="header-top-bar">
-        <div className="header-logo">
-          <img className="header-logo-img" src="/templogo.png" />
-        </div>
+        <Link to="/">
+          <div className="header-logo">
+            <img className="header-logo-img" src="/templogo.png" />
+          </div>
+        </Link>
         <div className="header-coupon">
           <h3 className="today-coupon">Today's Coupon:</h3>
           <h4 className="coupon-text">Apple20 (20% off apples)</h4>

@@ -6,7 +6,7 @@ export default function PersonalCare({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="personal-care-page-container category-page-container">
         <div className="personal-care-title catchphrase">
-          Treat yourself &nbsp; <u>well</u>. &nbsp;
+          Treat yourself&nbsp;<u>well</u>.&nbsp;
         </div>
       </div>
       <div className="personal-care-items category-items">

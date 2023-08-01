@@ -6,7 +6,7 @@ export default function Bakery({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="bread-page-container category-page-container">
         <div className="bread-title catchphrase">
-          Perfectly baked,&nbsp; <u>fresh</u> &nbsp;bread.
+          Perfectly baked,&nbsp;<u>fresh</u>&nbsp;bread.
         </div>
       </div>
       <div className="bread-items category-items">

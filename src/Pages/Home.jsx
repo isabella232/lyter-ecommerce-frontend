@@ -2,17 +2,17 @@ import React from "react";
 import WeeklySpecial from "../Components/WeeklySpecial";
 import BestDealsCardList from "../Components/BestDealsCardList";
 import data from "../DummyData/data.js";
+import Card from "../Components/Card";
 export default function Home() {
-  const title = data.title;
-  const img = data.img;
-  const description = data.description;
-  const price = data.price;
   return (
     <div className="home-container">
       <WeeklySpecial />
-      <BestDealsCardList img={img} title={title} description={description} price={price} />
+      <div className="cards-container-text-container">
+        <p className="cards-container-text">This Week's Best Deals:</p>
+      </div>
+      {data.beverage.map((item) => (
+        <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+      ))}
     </div>
   );
 }
-
-// img, title, description, price

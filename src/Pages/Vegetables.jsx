@@ -6,7 +6,7 @@ export default function Vegetables({ img, title, description, price }) {
     <div className="page-wrapper">
       <div className="vegetables-page-container category-page-container">
         <div className="vegetables-title catchphrase">
-          Get your &nbsp; <u>nutrient rich</u> &nbsp;veggies today!
+          Get your&nbsp;<u>nutrient rich</u>&nbsp;veggies today!
         </div>
       </div>
       <div className="vegetables-items category-items">
