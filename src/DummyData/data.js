@@ -1,24 +1,84 @@
 const data = {
-  beverage: [
+  vegetables: [
     {
-      img: "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00025000058011/cd541b1fc374438a73158ed2c3b38d39_large.png&width=512&type=webp&quality=90",
-      title: "Minute Maid Lemonade",
-      description: "20 oz of liquid GOLD!",
-      price: 2.29,
-    },
-    {
-      img: "https://cdn.shopify.com/s/files/1/0465/9698/0886/products/851B9B93-7664-46C8-AB91-C1A49B5344D7.png?v=1678069574",
-      title: "Calypso Lemonade",
-      description: "16 oz Tropical Flavor Blast",
-      price: 2.19,
+      img: "https://www.dudafresh.com/hubfs/images-2017/p-main-broccoli.png",
+      title: "Fresh Broccoli",
+      description: "Locally Sourced Organic Broccoli",
+      price: 1.99,
     },
   ],
-  bread: [
+  fruits: [
+    {
+      img: "https://www.dole.com/-/media/project/dole/produce-images/fruit/bannanas_web.png?rev=b27a9f94db1744e9ae702a0ba20871d4&hash=AF03ECA16ACB32D92A74462BE212E716",
+      title: "Bananas",
+      description: "Bundle of yellow bananas",
+      price: 2.99,
+    },
+  ],
+  dairy: [
+    {
+      img: "https://horizon.com/wp-content/uploads/horizon-shelf-stable-organic-whole-milk.png",
+      title: "Horizon Milk",
+      description: "8 fl oz, Organic Whole Milk",
+      price: 3.99,
+    },
+  ],
+  meats: [
+    {
+      img: "https://sandersonfarms.com/wp-content/uploads/2017/08/3715615BNSKBreastFilletswithRibMeat97FF8P_709x758-HERO.png",
+      title: "Sanderson Farms Chicken",
+      description: "Boneless Skinless Breast Fillets",
+      price: 5.99,
+    },
+  ],
+  bakery: [
     {
       img: "https://www.kroger.com/product/images/large/front/0001111021750",
       title: "Fresh-Baked Bread",
       description: "Loaf of artisan French Bread",
       price: 1.99,
+    },
+  ],
+  frozen_foods: [
+    {
+      img: "https://www.simpleskincare.com/sk-eu/content/dam/brands/breyers/united_states_ofamerica/1776143-077567254238-01.png",
+      title: "Breyers Ice Cream",
+      description: "Natural Vanilla Flavor",
+      price: 4.99,
+    },
+  ],
+
+  beverage: [
+    {
+      img: "https://www.pepsicoschoolsource.com/prod/s3fs-public/styles/pepsico_school_source_product_image_style_for_mobile_fallback/public/2021-06/Tropicana%C2%AE%20Apple%20Juice%20-%2010oz..png?itok=B1dk5n5k",
+      title: "Tropicana Apple Juice",
+      description: "100% Juice 14oz Bottle",
+      price: 2.29,
+    },
+  ],
+
+  cleaning_supplies: [
+    {
+      img: "https://res.cloudinary.com/hksqkdlah/image/upload/35148_sil-papertowels-bounty-paper-towels-95032-99197.png",
+      title: "Bounty Paper Towels",
+      description: "2x More Absorbant Paper Towels",
+      price: 1.99,
+    },
+  ],
+  personal_care: [
+    {
+      img: "https://i5.walmartimages.com/asr/c3d9c292-1272-4a83-8bc9-e84ff71ae9e4.9473a44513097a4b0902fe1ff878b729.png",
+      title: "Colgate Toothpaste",
+      description: "Cavity Protection Fluoride Toothpaste",
+      price: 2.99,
+    },
+  ],
+  baby_care: [
+    {
+      img: "https://diamondwipesb2b.com/cdn/shop/products/IMG_3921_2000x.png?v=1611616503",
+      title: "Wipessentials Baby Wipes",
+      description: "80 Fragrance-Free Wipes!",
+      price: 2.99,
     },
   ],
 };

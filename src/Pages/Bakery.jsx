@@ -1,7 +1,7 @@
 import React from "react";
-import CategoryCardList from "../Components/CategoryCardList";
+import Card from "../Components/Card.jsx";
 import data from "../DummyData/data.js";
-export default function Bread({ img, title, description, price }) {
+export default function Bakery({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
       <div className="bread-page-container category-page-container">
@@ -10,12 +10,9 @@ export default function Bread({ img, title, description, price }) {
         </div>
       </div>
       <div className="bread-items category-items">
-        <CategoryCardList
-          img={data.bread[0].img}
-          title={data.bread[0].title}
-          description={data.bread[0].description}
-          price={data.bread[0].price}
-        />
+        {data.bakery.map((item) => (
+          <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+        ))}
       </div>
     </div>
   );

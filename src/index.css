@@ -117,6 +117,7 @@ a {
   cursor: pointer;
   gap: 10px;
   padding: 4px;
+  text-align: center;
 }
 .category-container:hover {
   transform: scale(1.1);
