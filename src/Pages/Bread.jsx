@@ -10,7 +10,12 @@ export default function Bread({ img, title, description, price }) {
         </div>
       </div>
       <div className="bread-items category-items">
-        <CategoryCardList img={data.img} title={data.title} description={data.description} price={data.price} />
+        <CategoryCardList
+          img={data.bread[0].img}
+          title={data.bread[0].title}
+          description={data.bread[0].description}
+          price={data.bread[0].price}
+        />
       </div>
     </div>
   );
