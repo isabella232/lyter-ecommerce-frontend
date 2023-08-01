@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Components/Card.jsx";
 import data from "../DummyData/data.js";
+import { nanoid } from "nanoid";
 export default function Bakery({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
@@ -11,7 +12,9 @@ export default function Bakery({ img, title, description, price }) {
       </div>
       <div className="bread-items category-items">
         {data.bakery.map((item) => (
-          <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+          <div key={nanoid()}>
+            <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+          </div>
         ))}
       </div>
     </div>
