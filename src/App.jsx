@@ -13,7 +13,7 @@ import PersonalCare from "./Pages/PersonalCare";
 import BabyCare from "./Pages/BabyCare";
 import Fruits from "./Pages/Fruits";
 import MobileNav from "./Pages/MobileNav";
-import "./index.css";
+import "./styles.css";
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 

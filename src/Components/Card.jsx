@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card({ img, title, description, price }) {
   return (
-    <div className="card-wrapper flex justify-center">
+    <div className="card-wrapper flex justify-center mb-4">
       <div className="card-container">
         <div className="card-img-container">
           <img className="card-img" src={img} />
