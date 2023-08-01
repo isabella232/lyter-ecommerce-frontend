@@ -1,6 +1,6 @@
 import React from "react";
 import WeeklySpecial from "../Components/WeeklySpecial";
-import CardList from "../Components/CardList";
+import BestDealsCardList from "../Components/BestDealsCardList";
 import data from "../DummyData/data.js";
 export default function Home() {
   const title = data.title;
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <WeeklySpecial />
-      <CardList img={img} title={title} description={description} price={price} />
+      <BestDealsCardList img={img} title={title} description={description} price={price} />
     </div>
   );
 }

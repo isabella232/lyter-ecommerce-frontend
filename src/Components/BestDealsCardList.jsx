@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-export default function CardList({ img, title, description, price }) {
+export default function BestDealsCardList({ img, title, description, price }) {
   return (
     <>
       <div className="cards-container-text-container">

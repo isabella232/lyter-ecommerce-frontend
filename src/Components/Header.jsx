@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="header-container">
@@ -25,37 +25,54 @@ export default function Header() {
 
       <div className="header-bottom-bar">
         {/* Need to subscribe to flaticon for the rights to use these. Or swap to font awesome.*/}
-        <div className="beverages category-container">
-          <img className="category-img" src="/poinsettia.png" />
-          Beverages
-        </div>
-        <div className="bread category-container">
-          <img className="category-img" src="bread.png" /> Bread
-        </div>
-        <div className="breakfast category-container">
-          <img className="category-img" src="cereals.png" />
-          Breakfast
-        </div>
-        <div className="condiments category-container">
-          <img className="category-img" src="condiments.png" />
-          Condiments
-        </div>
-        <div className="dairy category-container">
-          <img className="category-img" src="dairy.png" />
-          Dairy
-        </div>
-        <div className="fruits category-container">
-          <img className="category-img" src="harvest.png" />
-          Fruits
-        </div>
-        <div className="meat category-container">
-          <img className="category-img" src="meat.png" />
-          Meat
-        </div>
-        <div className="vegetables category-container">
-          <img className="category-img" src="vegetable.png" />
-          Vegetables
-        </div>
+        <Link to="/beverages">
+          <div className="beverages category-container">
+            <img className="category-img" src="/poinsettia.png" />
+            Beverages
+          </div>
+        </Link>
+        <Link to="/bread">
+          <div className="bread category-container">
+            <img className="category-img" src="bread.png" />
+            Bread
+          </div>
+        </Link>
+        <Link to="/breakfast">
+          <div className="breakfast category-container">
+            <img className="category-img" src="cereals.png" />
+            Breakfast
+          </div>
+        </Link>
+        <Link to="/condiments">
+          <div className="condiments category-container">
+            <img className="category-img" src="condiments.png" />
+            Condiments
+          </div>
+        </Link>
+        <Link to="/dairy">
+          <div className="dairy category-container">
+            <img className="category-img" src="dairy.png" />
+            Dairy
+          </div>
+        </Link>
+        <Link to="/fruits">
+          <div className="fruits category-container">
+            <img className="category-img" src="harvest.png" />
+            Fruits
+          </div>
+        </Link>
+        <Link to="/meat">
+          <div className="meat category-container">
+            <img className="category-img" src="meat.png" />
+            Meat
+          </div>
+        </Link>
+        <Link to="/vegetables">
+          <div className="vegetables category-container">
+            <img className="category-img" src="vegetable.png" />
+            Vegetables
+          </div>
+        </Link>
       </div>
     </div>
   );
