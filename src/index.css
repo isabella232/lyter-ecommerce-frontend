@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   margin: 0px;
   padding: 0px;
@@ -22,7 +23,10 @@ p {
   font-family: "Libre Franklin", sans-serif;
   color: #4d4d4d;
   font-weight: 400;
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  position: sticky;
+  box-shadow: 0px 2px 40px 2px #e9e9e9;
 }
 .header-top-bar {
   display: flex;
@@ -129,9 +133,85 @@ p {
 
 .weekly-special-container {
   margin-top: 40px;
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 .weekly-special-img {
   width: 100%;
+}
+
+/* <Card /> Styles */
+
+.card-container {
+  max-width: 300px;
+  border: 1px solid #b5b5b5;
+  border-radius: 8px;
+  font-family: "Libre Franklin", sans-serif;
+  padding: 55px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.card-container > h2 {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+.card-container > h3 {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.card-img {
+  width: 70%;
+  cursor: pointer;
+}
+.card-title {
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: black;
+  box-shadow: inset 0 0 0 1px #616467;
+  background-color: rgb(35, 168, 42);
+  height: 48px;
+}
+.add-to-cart-btn:hover {
+  color: white;
+  background-color: rgb(83, 224, 40);
+}
+
+/* <CardList /> Styles*/
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 10px;
+  margin-top: 35px;
+  text-align: center;
+}
+.cards-container-text {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Libre Franklin", sans-serif;
 }
