@@ -5,7 +5,7 @@ export default function PersonalCare({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
       <div className="personal-care-page-container category-page-container">
-        <div className="personal-care-title catchphrase">
+        <div className="personal-care-title catchphrase text-center mb-4">
           Treat yourself&nbsp;<u>well</u>.&nbsp;
         </div>
       </div>

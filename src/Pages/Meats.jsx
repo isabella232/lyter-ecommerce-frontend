@@ -5,7 +5,7 @@ export default function Meats({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
       <div className="meats-page-container category-page-container">
-        <div className="meats-title catchphrase">
+        <div className="meats-title catchphrase text-center mb-4">
           Can't have a&nbsp; <u>summer cookout</u> &nbsp;without meat!
         </div>
       </div>

@@ -1,32 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Header() {
+import MobileNav from "../Pages/MobileNav";
+export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, toggleMobileMenu }) {
   return (
-    <div className="header-container">
-      <div className="header-top-bar">
-        <Link to="/">
-          <div className="header-logo">
-            <img className="header-logo-img" src="/templogo.png" />
+    <>
+      {isMobileMenuOpen && (
+        <MobileNav isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
+      )}
+      {!isMobileMenuOpen && (
+        <div className="header-container p-5 sticky w-full  ">
+          <div className="top-bar flex justify-between">
+            <div className="left-side flex items-center">
+              <div onClick={toggleMobileMenu}>
+                <img className="w-8 h-8 mr-3" src="/menu.png" />
+              </div>
+              <Link to="/" className="w-12  flex">
+                <div className="header-logo w-12">
+                  <img className="header-logo-img w-12" src="/templogo.png" />
+                </div>
+              </Link>
+            </div>
+            <div className="header-shopping-bag w-12">
+              <img className="shopping-bag-img w-12" src="/shoppingbag.png" />
+            </div>
           </div>
-        </Link>
-        <div className="header-coupon">
-          <h3 className="today-coupon">Today's Coupon:</h3>
+          {/* <div className="header-coupon">
+          <h3 className="">Today's Coupon:</h3>
           <h4 className="coupon-text">Apple20 (20% off apples)</h4>
-        </div>
-        <div className="header-searchbar">
-          <input className="header-searchbar-input" type="text" placeholder="Search Products" />
-        </div>
-        <div className="header-account">
-          <img className="account-icon-img" src="/account-icon.png" />
-          <p className="sign-in-text">Sign In</p>
-        </div>
-        <div className="header-shopping-bag">
-          <img className="shopping-bag-img" src="/shoppingbag.png" />
-        </div>
-      </div>
+        </div> */}
+          <div className="header-searchbar mt-6 flex items-center border-b border-teal-500 py-2">
+            <input
+              className="header-searchbar-input appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+              type="text"
+              placeholder="Search Products"
+            />
+          </div>
+          {/* <div className="header-account">
+        <img className="account-icon-img" src="/account-icon.png" />
+        <p className="sign-in-text">Sign In</p>
+      </div> */}
 
-      <div className="header-bottom-bar">
-        {/* Need to subscribe to flaticon for the rights to use these. Or swap to font awesome.*/}
+          {/* <div className="header-bottom-bar">
+        {/* Need to subscribe to flaticon for the rights to use these. Or swap to font awesome.}
         <Link to="/vegetables">
           <div className="vegetables category-container">
             <img className="category-img" src="vegetable.png" />
@@ -88,7 +103,9 @@ export default function Header() {
             Baby Care
           </div>
         </Link>
-      </div>
-    </div>
+      </div> */}
+        </div>
+      )}
+    </>
   );
 }

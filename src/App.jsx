@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Components/Header";
+import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Beverages from "./Pages/Beverages";
@@ -12,22 +12,29 @@ import CleaningSupplies from "./Pages/CleaningSupplies";
 import PersonalCare from "./Pages/PersonalCare";
 import BabyCare from "./Pages/BabyCare";
 import Fruits from "./Pages/Fruits";
+import MobileNav from "./Pages/MobileNav";
+import "./index.css";
 export default function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  function toggleMobileMenu() {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  }
   return (
     <div>
-      <Header />
+      <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/beverages" element={<Beverages />} />
-        <Route path="/bread" element={<Bakery />} />
-        <Route path="/vegetables" element={<Vegetables />} />
-        <Route path="/fruits" element={<Fruits />} />
-        <Route path="/dairy" element={<Dairy />} />
-        <Route path="/meats" element={<Meats />} />
-        <Route path="/frozen-foods" element={<FrozenFoods />} />
-        <Route path="/cleaning-supplies" element={<CleaningSupplies />} />
-        <Route path="/personal-care" element={<PersonalCare />} />
-        <Route path="/baby-care" element={<BabyCare />} />
+        {!isMobileMenuOpen && <Route path="/" element={<Home />} />}
+        {!isMobileMenuOpen && <Route path="/beverages" element={<Beverages />} />}
+        {!isMobileMenuOpen && <Route path="/bread" element={<Bakery />} />}
+        {!isMobileMenuOpen && <Route path="/vegetables" element={<Vegetables />} />}
+        {!isMobileMenuOpen && <Route path="/fruits" element={<Fruits />} />}
+        {!isMobileMenuOpen && <Route path="/dairy" element={<Dairy />} />}
+        {!isMobileMenuOpen && <Route path="/meats" element={<Meats />} />}
+        {!isMobileMenuOpen && <Route path="/frozen-foods" element={<FrozenFoods />} />}
+        {!isMobileMenuOpen && <Route path="/cleaning-supplies" element={<CleaningSupplies />} />}
+        {!isMobileMenuOpen && <Route path="/personal-care" element={<PersonalCare />} />}
+        {!isMobileMenuOpen && <Route path="/baby-care" element={<BabyCare />} />}
       </Routes>
     </div>
   );

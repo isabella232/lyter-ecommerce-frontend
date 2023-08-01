@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <div className="home-container">
       <WeeklySpecial />
-      <div className="cards-container-text-container">
+      {/* <div className="cards-container-text-container">
         <p className="cards-container-text">This Week's Best Deals:</p>
       </div>
       {data.beverage.map((item) => (
         <Card img={item.img} title={item.title} description={item.description} price={item.price} />
-      ))}
+      ))} */}
     </div>
   );
 }
