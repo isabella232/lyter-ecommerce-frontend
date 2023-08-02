@@ -3,6 +3,7 @@ import data from "../DummyData/data.js";
 import Card from "../Components/Card";
 import { nanoid } from "nanoid";
 export default function FrozenFoods({ img, title, description, price }) {
+  const frozenFoodsdata = data.find((data) => data.name === "frozen_foods");
   return (
     <div className="page-wrapper">
       <div className="frozen-foods-page-container category-page-container">
@@ -11,11 +12,16 @@ export default function FrozenFoods({ img, title, description, price }) {
         </div>
       </div>
       <div className="frozen-foods-items category-items">
-        {data.frozen_foods.map((item) => (
+        {
           <div key={nanoid()}>
-            <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+            <Card
+              img={frozenFoodsdata.img}
+              title={frozenFoodsdata.title}
+              description={frozenFoodsdata.description}
+              price={frozenFoodsdata.price}
+            />
           </div>
-        ))}
+        }
       </div>
     </div>
   );

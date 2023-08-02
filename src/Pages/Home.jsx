@@ -11,14 +11,9 @@ export default function Home() {
       </div>
 
       <ul className="home-page-cards-container flex flex-wrap">
-        {Object.keys(data).map((keyName, i) => (
+        {data.map((item, i) => (
           <div className="basis-1/2" key={i}>
-            <Card
-              img={data[keyName][0].img}
-              title={data[keyName][0].title}
-              description={data[keyName][0].description}
-              price={data[keyName][0].price}
-            />
+            <Card img={item.img} title={item.title} description={item.description} price={item.price} />
           </div>
         ))}
       </ul>

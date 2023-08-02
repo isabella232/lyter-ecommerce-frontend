@@ -32,9 +32,11 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, toggleMo
                 </div>
               </Link>
             </div>
-            <div className="header-shopping-bag w-12">
-              <img className="shopping-bag-img w-12" src="/shoppingbag.png" />
-            </div>
+            <Link to="/checkout">
+              <div className="header-shopping-bag w-12">
+                <img className="shopping-bag-img w-12" src="/shoppingbag.png" />
+              </div>
+            </Link>
           </div>
           {/* <div className="header-coupon">
           <h3 className="">Today's Coupon:</h3>

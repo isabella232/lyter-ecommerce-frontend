@@ -3,6 +3,7 @@ import data from "../DummyData/data.js";
 import Card from "../Components/Card";
 import { nanoid } from "nanoid";
 export default function Fruits({ img, title, description, price }) {
+  const fruitsData = data.find((data) => data.name === "fruits");
   return (
     <div className="page-wrapper">
       <div className="fruits-page-container category-page-container">
@@ -11,11 +12,11 @@ export default function Fruits({ img, title, description, price }) {
         </div>
       </div>
       <div className="fruits-items category-items">
-        {data.fruits.map((item) => (
+        {
           <div key={nanoid()}>
-            <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+            <Card img={fruitsData.img} title={fruitsData.title} description={fruitsData.description} price={fruitsData.price} />
           </div>
-        ))}
+        }
       </div>
     </div>
   );
