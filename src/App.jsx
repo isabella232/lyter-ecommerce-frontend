@@ -14,6 +14,7 @@ import BabyCare from "./Pages/BabyCare";
 import Fruits from "./Pages/Fruits";
 import "./index.css";
 import "../dist/output.css";
+import CheckoutPage from "./Pages/CheckoutPage";
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -35,6 +36,7 @@ export default function App() {
         {!isMobileMenuOpen && <Route path="/cleaning-supplies" element={<CleaningSupplies />} />}
         {!isMobileMenuOpen && <Route path="/personal-care" element={<PersonalCare />} />}
         {!isMobileMenuOpen && <Route path="/baby-care" element={<BabyCare />} />}
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </div>
   );
