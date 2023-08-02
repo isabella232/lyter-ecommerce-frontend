@@ -12,13 +12,12 @@ export default function Home() {
 
       <ul className="home-page-cards-container flex flex-wrap">
         {Object.keys(data).map((keyName, i) => (
-          <div className="w-full basis-1/2" key={i}>
+          <div className="basis-1/2" key={i}>
             <Card
               img={data[keyName][0].img}
               title={data[keyName][0].title}
               description={data[keyName][0].description}
               price={data[keyName][0].price}
-              view="home"
             />
           </div>
         ))}
