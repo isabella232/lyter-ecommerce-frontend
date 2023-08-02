@@ -6,7 +6,7 @@ export default function Vegetables({ img, title, description, price }) {
   return (
     <div className="page-wrapper p-5">
       <div className="vegetables-page-container category-page-container">
-        <div className="vegetables-title catchphrase text-center mb-4">
+        <div className="vegetables-title catchphrase text-center mb-4 text-3xl">
           Get your&nbsp;<u>nutrient rich</u>&nbsp;veggies today!
         </div>
       </div>

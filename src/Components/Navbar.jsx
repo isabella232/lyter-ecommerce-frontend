@@ -1,17 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MobileNav from "../Pages/MobileNav";
+import { CSSTransition } from "react-transition-group";
 export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, toggleMobileMenu }) {
+  const [isEnter, setIsEnter] = React.useState(false); //Transition state.
+  function handleHamburgerClick() {
+    toggleMobileMenu();
+    setIsEnter(!isEnter);
+  }
   return (
     <>
       {isMobileMenuOpen && (
-        <MobileNav isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
+        <CSSTransition in={isEnter} timeout={1000} classNames="myclass">
+          <MobileNav
+            isMobileMenuOpen={isMobileMenuOpen}
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
+            toggleMobileMenu={toggleMobileMenu}
+          />
+        </CSSTransition>
       )}
       {!isMobileMenuOpen && (
         <div className="header-container p-5 sticky w-full  ">
           <div className="top-bar flex justify-between">
             <div className="left-side flex items-center">
-              <div onClick={toggleMobileMenu}>
+              <div onClick={handleHamburgerClick}>
                 <img className="w-8 h-8 mr-3" src="/menu.png" />
               </div>
               <Link to="/" className="w-12  flex">

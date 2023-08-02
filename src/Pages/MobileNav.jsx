@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 export default function MobileNav({ isMobileMenuOpen, setIsMobileMenuOpen, toggleMobileMenu }) {
   return (
     <div className="w-screen h-full min-h-screen z-50 p-6 bg-green-400">
-      <div className="flex justify-end">
-        <img onClick={toggleMobileMenu} className="w-8 h-8 mr-3" src="/close.png" />
+      <div className="flex justify-between items-center mb-4">
+        {/*Header of hamburger popout */}
+        <img src="./templogo.png" className="w-8 h-8" />
+        <h2>Enter Address</h2>
+        <img onClick={toggleMobileMenu} className="w-8 h-8 " src="/close.png" />
       </div>
 
       <div className="header-bottom-bar flex flex-col gap-4 border-b border-teal-500 py-2">

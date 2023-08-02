@@ -13,22 +13,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.card-container {
-  max-width: 300px;
-  max-height: 500px;
-  width: 300px;
-  height: 500px;
-  border: 1px solid #e7e7e7;
-  border-radius: 16px;
-  font-family: "Libre Franklin", sans-serif;
-  padding: 55px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0px 30px 30px -28px #9087ad;
-}
+
 .card-container > h2 {
   font-weight: 400;
   font-family: "Spline Sans", sans-serif;
@@ -40,6 +25,23 @@ body {
   font-size: 16px;
   color: #5c5c5c;
 }
+.card-container {
+  max-width: 100%;
+  max-height: 100%;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  font-family: "Libre Franklin", sans-serif;
+  padding: 55px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 30px 30px -28px #9087ad;
+}
+
 .card-img-container {
   display: flex;
   flex-direction: column;
@@ -55,14 +57,20 @@ body {
   gap: 20px;
 }
 .card-img {
-  width: 70%;
   cursor: pointer;
   max-width: 100%;
   max-height: 100%;
   max-height: 400px;
+  width: 140px;
+  height: auto;
 }
 .card-title {
   cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Spline Sans", sans-serif;
+  text-align: center;
 }
 .card-description {
   font-weight: 300;
@@ -95,4 +103,105 @@ body {
   color: white;
   background-color: rgb(83, 224, 40);
   border: none;
+}
+
+.home-page-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container-home > h2 {
+  font-weight: 400;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 20px;
+}
+.card-container-home > h3 {
+  font-weight: 300;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+.card-container-home {
+  max-width: 100%;
+  max-height: 100%;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  font-family: "Libre Franklin", sans-serif;
+  padding: 55px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 30px 30px -28px #9087ad;
+}
+
+.card-img-container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-bottom-container-home {
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.card-img-home {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  max-height: 400px;
+  width: 140px;
+  height: auto;
+}
+.card-title-home {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Spline Sans", sans-serif;
+  text-align: center;
+}
+.card-description-home {
+  font-weight: 300;
+}
+
+.add-to-cart-btn-home {
+  display: inline-block;
+  outline: none;
+
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 6px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid black;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: black;
+  background-color: transparent;
+  height: 48px;
+  width: 180px;
+}
+.add-to-cart-btn-home:hover {
+  color: white;
+  background-color: rgb(83, 224, 40);
+  border: none;
+}
+
+.home-page-cards-container {
+  display: flex;
+  flex-wrap: wrap;
 }

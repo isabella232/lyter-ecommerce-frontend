@@ -6,7 +6,7 @@ export default function CleaningSupplies({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
       <div className="cleaning-supplies-page-container category-page-container">
-        <div className="cleaning-supplies-title catchphrase text-center mb-4">
+        <div className="cleaning-supplies-title catchphrase text-center mb-4 text-3xl">
           Trustworthy and&nbsp;<u>reliable</u>&nbsp;cleaning supplies.
         </div>
       </div>

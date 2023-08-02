@@ -6,7 +6,7 @@ export default function Beverages({ img, title, description, price }) {
   return (
     <div className="page-wrapper">
       <div className="beverages-page-container category-page-container">
-        <div className="beverages-title catchphrase">
+        <div className="beverages-title catchphrase text-center mb-4 text-3xl">
           Cool off this summer with these&nbsp;<u>ice-cold</u>&nbsp;beverages.
         </div>
       </div>
