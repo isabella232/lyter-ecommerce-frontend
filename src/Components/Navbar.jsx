@@ -26,9 +26,9 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, toggleMo
               <div onClick={handleHamburgerClick}>
                 <img className="w-8 h-8 mr-3" src="/menu.png" />
               </div>
-              <Link to="/" className="w-12  flex">
-                <div className="header-logo w-12">
-                  <img className="header-logo-img w-12" src="/templogo.png" />
+              <Link to="/" className="w-24  flex">
+                <div className="header-logo w-24">
+                  <img className="header-logo-img w-24" src="/logo.png" />
                 </div>
               </Link>
             </div>

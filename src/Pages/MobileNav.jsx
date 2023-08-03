@@ -6,7 +6,7 @@ export default function MobileNav({ isMobileMenuOpen, setIsMobileMenuOpen, toggl
     <div className="w-screen h-full min-h-screen z-50 p-6 bg-green-400">
       <div className="flex justify-between items-center mb-4">
         {/*Header of hamburger popout */}
-        <img src="./templogo.png" className="w-8 h-8" />
+        <img src="./logo-2.png" className="w-10 h-10" />
         <h2>Enter Address</h2>
         <img onClick={toggleMobileMenu} className="w-8 h-8 " src="/close.png" />
       </div>
