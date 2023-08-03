@@ -14,7 +14,8 @@ import BabyCare from "./Pages/BabyCare";
 import Fruits from "./Pages/Fruits";
 import "./index.css";
 import "../dist/output.css";
-import CheckoutPage from "./Pages/CheckoutPage";
+import { CheckoutPage } from "./Pages/CheckoutPage";
+import { ShopContextProvider } from "./context/shop-context";
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -23,21 +24,23 @@ export default function App() {
   }
   return (
     <div>
-      <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
-      <Routes>
-        {!isMobileMenuOpen && <Route path="/" element={<Home />} />}
-        {!isMobileMenuOpen && <Route path="/beverages" element={<Beverages />} />}
-        {!isMobileMenuOpen && <Route path="/bread" element={<Bakery />} />}
-        {!isMobileMenuOpen && <Route path="/vegetables" element={<Vegetables />} />}
-        {!isMobileMenuOpen && <Route path="/fruits" element={<Fruits />} />}
-        {!isMobileMenuOpen && <Route path="/dairy" element={<Dairy />} />}
-        {!isMobileMenuOpen && <Route path="/meats" element={<Meats />} />}
-        {!isMobileMenuOpen && <Route path="/frozen-foods" element={<FrozenFoods />} />}
-        {!isMobileMenuOpen && <Route path="/cleaning-supplies" element={<CleaningSupplies />} />}
-        {!isMobileMenuOpen && <Route path="/personal-care" element={<PersonalCare />} />}
-        {!isMobileMenuOpen && <Route path="/baby-care" element={<BabyCare />} />}
-        <Route path="/checkout" element={<CheckoutPage />} />
-      </Routes>
+      <ShopContextProvider>
+        <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
+        <Routes>
+          {!isMobileMenuOpen && <Route path="/" element={<Home />} />}
+          {!isMobileMenuOpen && <Route path="/beverages" element={<Beverages />} />}
+          {!isMobileMenuOpen && <Route path="/bread" element={<Bakery />} />}
+          {!isMobileMenuOpen && <Route path="/vegetables" element={<Vegetables />} />}
+          {!isMobileMenuOpen && <Route path="/fruits" element={<Fruits />} />}
+          {!isMobileMenuOpen && <Route path="/dairy" element={<Dairy />} />}
+          {!isMobileMenuOpen && <Route path="/meats" element={<Meats />} />}
+          {!isMobileMenuOpen && <Route path="/frozen-foods" element={<FrozenFoods />} />}
+          {!isMobileMenuOpen && <Route path="/cleaning-supplies" element={<CleaningSupplies />} />}
+          {!isMobileMenuOpen && <Route path="/personal-care" element={<PersonalCare />} />}
+          {!isMobileMenuOpen && <Route path="/baby-care" element={<BabyCare />} />}
+          <Route path="/checkout" element={<CheckoutPage />} />
+        </Routes>
+      </ShopContextProvider>
     </div>
   );
 }

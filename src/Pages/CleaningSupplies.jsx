@@ -19,6 +19,7 @@ export default function CleaningSupplies({ img, title, description, price }) {
               title={cleaningSuppliesData.title}
               description={cleaningSuppliesData.description}
               price={cleaningSuppliesData.price}
+              id={cleaningSuppliesData.id}
             />
           </div>
         }

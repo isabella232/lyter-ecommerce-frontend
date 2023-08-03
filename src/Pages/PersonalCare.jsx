@@ -19,6 +19,7 @@ export default function PersonalCare({ img, title, description, price }) {
               title={personalCareData.title}
               description={personalCareData.description}
               price={personalCareData.price}
+              id={personalCareData.id}
             />
           </div>
         }

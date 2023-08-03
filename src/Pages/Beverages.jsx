@@ -19,6 +19,7 @@ export default function Beverages({ img, title, description, price }) {
               title={beveragesData.title}
               description={beveragesData.description}
               price={beveragesData.price}
+              id={beveragesData.id}
             />
           </div>
         }

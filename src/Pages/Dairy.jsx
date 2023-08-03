@@ -14,7 +14,13 @@ export default function Dairy({ img, title, description, price }) {
       <div className="dairy-items category-items">
         {
           <div key={nanoid()}>
-            <Card img={dairyData.img} title={dairyData.title} description={dairyData.description} price={dairyData.price} />
+            <Card
+              img={dairyData.img}
+              title={dairyData.title}
+              description={dairyData.description}
+              price={dairyData.price}
+              id={dairyData.id}
+            />
           </div>
         }
       </div>

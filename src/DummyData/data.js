@@ -26,9 +26,9 @@ const data = [
   },
 
   {
-    img: "https://sandersonfarms.com/wp-content/uploads/2017/08/3715615BNSKBreastFilletswithRibMeat97FF8P_709x758-HERO.png",
-    title: "Sanderson Farms Chicken",
-    description: "Boneless Skinless Breast Fillets",
+    img: "https://swiftmeats.com/wp-content/uploads/2020/03/Flat-Iron-Steak-1.png",
+    title: "Swift Steak",
+    description: "Premium flat iron steak",
     price: 5.99,
     id: 3,
     name: "meats",

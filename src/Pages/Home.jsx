@@ -13,7 +13,7 @@ export default function Home() {
       <ul className="home-page-cards-container flex flex-wrap">
         {data.map((item, i) => (
           <div className="basis-1/2" key={i}>
-            <Card img={item.img} title={item.title} description={item.description} price={item.price} />
+            <Card img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} />
           </div>
         ))}
       </ul>

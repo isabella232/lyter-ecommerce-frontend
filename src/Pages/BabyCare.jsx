@@ -20,6 +20,7 @@ export default function BabyCare({ img, title, description, price }) {
               title={babyCareData.title}
               description={babyCareData.description}
               price={babyCareData.price}
+              id={babyCareData.id}
             />
           </div>
         }

@@ -19,6 +19,7 @@ export default function FrozenFoods({ img, title, description, price }) {
               title={frozenFoodsdata.title}
               description={frozenFoodsdata.description}
               price={frozenFoodsdata.price}
+              id={frozenFoodsdata.id}
             />
           </div>
         }
