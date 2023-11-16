@@ -9,12 +9,10 @@ export const CheckoutPage = () => {
     useContext(ShopContext);
   
   const navigate = useNavigate();
-  
-  console.log('cartItemes : ', cartItems);
 
   return (
     <div className="flex justify-center items-start md:w-full min-h-[85dvh]">
-      {cartItems.lenght > 0 ? (
+      {cartItems.length !== 0 ? (
         <div className="bg-[#fff] rounded w-[95%] 
         overflow-x-auto  md:overflow-x-hidden h-100 md:w-[80vw]
         md:h-auto p-2 md:p-10 flex flex-col justify-center items-center gap-[20px] shadow-lg">

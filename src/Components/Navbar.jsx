@@ -70,7 +70,7 @@ export default function Navbar({
       )}
 
       {!isMobileMenuOpen && (
-        <div className="header-container p-5  w-full md:px-7">
+        <div className="header-container p-5  w-full md:px-7 sticky top-0 bg-[#F5F5F5] z-10">
           <div className="top-bar flex justify-between items-center">
             <div className="left-side flex items-center">
               {/* menu opener */}
