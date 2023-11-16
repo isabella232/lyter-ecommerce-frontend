@@ -2,18 +2,24 @@ import React, { useContext } from "react";
 import data from "../DummyData/data";
 import { ShopContext } from "../context/shop-context";
 import CartItem from "../Components/CartItem";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const CheckoutPage = () => {
   const { cartItems, addToCart, removeFromCart, totalItems, totalPrice } =
     useContext(ShopContext);
+  
+  const navigate = useNavigate();
+  
+  console.log('cartItemes : ', cartItems);
 
   return (
-    <div className="flex justify-center items-center md:w-full h-[85dvh]">
-      {cartItems ? (
-        <div className="bg-[#fff] rounded w-[95%] overflow-x-auto md:overflow-x-hidden h-100 md:w-[80vw] md:h-auto p-2 md:p-10 flex flex-col justify-center items-center gap-[20px] shadow-lg">
+    <div className="flex justify-center items-start md:w-full min-h-[85dvh]">
+      {cartItems.lenght > 0 ? (
+        <div className="bg-[#fff] rounded w-[95%] 
+        overflow-x-auto  md:overflow-x-hidden h-100 md:w-[80vw]
+        md:h-auto p-2 md:p-10 flex flex-col justify-center items-center gap-[20px] shadow-lg">
           <div className=" w-[692px] overflow-x-scroll pl-[176px] md:w-full md:overflow-x-hidden md:pl-0 ">
-            <table className="w-full text-sm text-left text-gray-500 w-100">
+            <table className="w-full text-sm text-left  text-gray-500 w-100">
               <thead className="text-xs bg-slate-100 text-gray-700 px-5 fonts uppercase ">
                 <tr>
                   <th
@@ -44,7 +50,7 @@ export const CheckoutPage = () => {
                 </tr>
               </thead>
 
-              <tbody className="w-100 md:w-[400px] overflow-y-auto overflow-x-auto">
+              <tbody className="w-full md:w-[400px]">
                 {cartItems.map((item, index) => (
                   <CartItem data={item} key={index} />
                 ))}
@@ -58,7 +64,7 @@ export const CheckoutPage = () => {
             <div className="">{totalPrice}</div>
           </div>
           <Link
-            to={'/checkout-payment'}
+            to={"/checkout-payment"}
             className="bg-[#FF0066] max-w-[500px] transition-all hover:bg-[#ff0f6f] text-center 
           py-3 self-end rounded-md font-bold text-white
           w-full h-[50px]"
@@ -84,9 +90,11 @@ export const CheckoutPage = () => {
 
           <div className="">Your Cart Is Empty</div>
 
-          <div className="button">
+            <div className="button cursor-pointer"
+            onClick={()=> navigate('/')}
+            >
             <div className="button-wrapper">
-              <div className="text">Go Shopping</div>
+              <div className="text ">Go Shopping</div>
 
               <span className="icon">
                 <svg
