@@ -34,7 +34,7 @@ export const ShopContextProvider = (props) => {
   /* ENDPOINT */
   //testing http://localhost:8000
   //production
-  const endpointHead = "http://localhost:8000";
+  const endpointHead = "https://lyter-inc.onrender.com/v1/lyter";
   
 
   /* CART */
