@@ -9,13 +9,13 @@ const ProductDetails = () => {
     useContext(ShopContext);
   console.log("details : ", ProductDetails);
 
-  const removeCom = (data) => {
-    if (data.count === 1) {
-      removeFromCart(data);
-    } else {
-      removeMini(data);
-    }
-  };
+  // const removeCom = (data) => {
+  //   if (data.count === 1) {
+  //     removeFromCart(data);
+  //   } else {
+  //     removeMini(data);
+  //   }
+  // };
 
   return (
     <main
@@ -64,14 +64,14 @@ const ProductDetails = () => {
                   class="fonts bg-gray-200 py-3 px-10 rounded-md text-center flex justify-center
                gap-[7px] items-center self-center justify-self-center"
                 >
-                  <IoMdAdd className="cursor-pointer" onClick={addMini(productDetails.details)} />
+                  <IoMdAdd className="cursor-pointer" />
                   <span className="text-[1.4rem] font-semibold">{0}</span>
-                  <IoMdRemove className="cursor-pointer" onClick={removeCom(productDetails.details)} />
+                  <IoMdRemove className="cursor-pointer" />
                 </div>
                 {/* add to cart button */}
                 <button
                   className="px-5 py-3 xl:w-[400px] sm:w-[200px] rounded-md bg-green-600 hover:translate-y-1 transition-all text-white"
-                  onClick={addToCart(productDetails.details)}
+                  // onClick={addToCart(productDetails.details)}
                 >
                   Add to Cart
                 </button>
