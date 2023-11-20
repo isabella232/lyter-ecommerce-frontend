@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { ShopContext } from "../context/shop-context";
 import { Link } from "react-router-dom";
-import { IoMdAdd,IoMdRemove  } from "react-icons/io"
+import { IoMdAdd, IoMdRemove } from "react-icons/io";
 
 const ProductDetails = () => {
   const { productDetails, setProductDetails, addMini, addToCart } =
@@ -18,8 +18,10 @@ const ProductDetails = () => {
   };
 
   return (
-    <main className="fixed top-[1] left-5 xl:left-[25%] h-[70%] xl:w-[1200px] w-[95%] mx-auto px-7 
-    pt-5 bg-white rounded-xl shadow-2xl shadow-gray-400">
+    <main
+      className="fixed top-[1] left-5 xl:left-[25%] h-[70%] xl:w-[1200px] w-[95%] mx-auto px-7 
+    pt-5 bg-white rounded-xl shadow-2xl shadow-gray-400"
+    >
       {/* container */}
       <div className="flex flex-col gap-6 ">
         {/* back button */}
@@ -62,20 +64,26 @@ const ProductDetails = () => {
                   class="fonts bg-gray-200 py-3 px-10 rounded-md text-center flex justify-center
                gap-[7px] items-center self-center justify-self-center"
                 >
-                  <IoMdAdd className="cursor-pointer" />
+                  <IoMdAdd className="cursor-pointer" onClick={addMini(productDetails.details)} />
                   <span className="text-[1.4rem] font-semibold">{0}</span>
-                  <IoMdRemove className="cursor-pointer" />
+                  <IoMdRemove className="cursor-pointer" onClick={removeCom(productDetails.details)} />
                 </div>
                 {/* add to cart button */}
                 <button
                   className="px-5 py-3 xl:w-[400px] sm:w-[200px] rounded-md bg-green-600 hover:translate-y-1 transition-all text-white"
-                  // onClick={addToCart(productDetails.details)}
+                  onClick={addToCart(productDetails.details)}
                 >
                   Add to Cart
                 </button>
               </div>
             </div>
           </div>
+        </section>
+        <section>
+          <h1 className="font-semibold pb-2 text-[1.2rem]">Details</h1>
+          <p className="text-gray-700">
+            {productDetails.details.description}
+          </p>
         </section>
         <section className="p-4">
           <h1 className="sm:text-[1.7rem] pb-10 text-[1.5rem]">

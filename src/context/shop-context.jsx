@@ -149,7 +149,7 @@ export const ShopContextProvider = (props) => {
     totalItems = cartItems.reduce((acc, item) => acc + item.count, 0);
     totalPrice = cartItems.reduce((acc, item) => {
       const dataItem = data.find((d) => d.id === item.eachitem.id);
-      return acc + item.count;
+      return acc + item.count * dataItem.price;
     }, 0);
   } else {
     console.log("cart data is not an array");
