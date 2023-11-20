@@ -2,12 +2,22 @@ import React, { useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 
 export default function Card({ data }) {
+  const {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    totalItems,
+    totalPrice,
+    setProductDetails
+  } = useContext(ShopContext);
 
-  const {cartItems, addToCart, removeFromCart, totalItems, totalPrice} = useContext(ShopContext);
-  
+  const clickHandler = () => {
+    setProductDetails({ selected: true, details: data });
+  };
+
   return (
     <>
-     {/*
+      {/*
       <div className="card-wrapper flex justify-center mb-4">
         <div className="card-container">
           <div className="card-img-container">
@@ -25,11 +35,9 @@ export default function Card({ data }) {
       </div>
         */}
 
-
-      <div className="card p-5 rounded-md">
-
+      <div onClick={clickHandler} className="card p-5 rounded-md">
         <div className="card-img flex justify-center items-center">
-           <img className="h-[160px] py-3 object-cover " src={data.img} />
+          <img className="h-[160px] py-3 object-cover " src={data.img} />
         </div>
 
         <div className="card-info">
