@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import WeeklySpecial from "../Components/WeeklySpecial";
 import data from "../DummyData/data.js";
 import Card from "../Components/Card";
@@ -6,13 +6,20 @@ import Ads from "../Components/Ads";
 import Filter from "../Components/Filter";
 import { ShopContext } from "../context/shop-context";
 import StoreSidebar from "../Components/StoreSidebar";
+import ProductDetails from "../Components/ProductDetails.jsx";
 
 export default function Home() {
-  const { cartItems, addToCart, removeFromCart, totalItems, totalPrice } =
-    useContext(ShopContext);
+  // const { cartItems, addToCart, removeFromCart, totalItems, totalPrice } =
+  //   useContext(ShopContext);
+
+  const { productDetails } = useContext(ShopContext);
+
+  useEffect(() => {
+    console.log("product Detais : ", productDetails);
+  }, [productDetails]);
 
   return (
-    <div className="home-container z-0 relative flex flex-row">
+    <div className="home-container relative z-0 flex flex-row">
       <StoreSidebar />
       <div className="flex flex-col ">
         <WeeklySpecial />
@@ -32,6 +39,7 @@ export default function Home() {
             </div>
           ))}
         </ul>
+        {productDetails.selected && <ProductDetails />}
       </div>
 
       {/* <div className="home-page-list-container flex flex-wrap">
