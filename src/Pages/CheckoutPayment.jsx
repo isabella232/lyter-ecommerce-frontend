@@ -2,6 +2,52 @@ import DeliveryRibbon from "../Components/DeliveryRibbon";
 import InputField from "../Components/InputField";
 
 const CheckoutPayment = () => {
+
+ const handleSubmit = async () => {
+ 
+ alert("my order placed");    //for development/debug purposse
+ 
+ const customerId = '1'.padStart(36, ' ');  // placeholder values
+  const retailerId = '1'.padStart(36, ' ');   //placeholder but this may be deprecated also
+
+  const orderData = {
+    name: 'DEPRECATED ', //  placeholder dataq
+    featuredImage: 'ALSO DEPRECATED',   
+    amount: 100, // Total order amount
+    customerId: customerId,
+    retailerOrderId: retailerId
+    // Add other fields as required
+  };
+
+ 
+const orderItems = [
+  { productId: '1'.padStart(36, ' '), price: 10 },   // Pads '1' with 36 spaces as DB has char(36) type for product id.
+   { productId: '1'.padStart(36, ' '), price: 10 },  // second item.
+  // add more items
+];
+
+
+  try {
+    const response = await fetch('http://localhost:8000/orders/add_order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ orderData, orderItems }),
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log('Order processed.', responseData); 
+    } else {
+      console.error('Error with order.'); 
+    }
+  } catch (error) {
+    console.error('Error...', error); 
+  }
+};
+
+
   return (
     // <main className='bg-[#F5F5F5] w-full h-full'>
     //   {/* left */}
@@ -88,6 +134,8 @@ const CheckoutPayment = () => {
             <button
               className="mt-6 rounded-md border border-gray-100 p-2 px-9 bg-[#FF0066]
           text-white font-semibold transition-all hover:scale-x-105 hover:border-gray-200 hover:bg-primary hover:text-gray-100"
+          
+          onClick={handleSubmit}
             >
               Place order
             </button>
