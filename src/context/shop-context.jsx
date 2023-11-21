@@ -3,7 +3,7 @@ import data from "../DummyData/data";
 import Cookies from "js-cookie"; // Import the js-cookie package
 import axios from "axios";
 
-export const ShopContext = createContext("context");
+export const  ShopContext = createContext("context");
 
 console.log(data, "Cart data");
 /*
@@ -72,7 +72,7 @@ export const ShopContextProvider = (props) => {
     console.log(cartItems, itemToRemove, "inin");
     setCartItems((prev) => {
       const updatedCart = prev.filter(
-        (item) => item.eachitem.id !== itemToRemove.eachitem.id
+        (item) => item.eachitem.id !== itemToRemove
       );
       console.log(updatedCart, "updatedCart Li");
       Cookies.set("cart", JSON.stringify(updatedCart));
@@ -81,10 +81,11 @@ export const ShopContextProvider = (props) => {
   };
 
   const addMini = (itemToAdd) => {
+    console.log("hiiiiii ", itemToAdd)
     setCartItems((prev) => {
       const updatedCart = [...prev];
       const existingItemIndex = updatedCart.findIndex(
-        (item) => item.eachitem.id === itemToAdd.eachitem.id
+        (item) => item.eachitem.id === itemToAdd.id
       );
 
       if (existingItemIndex !== -1) {
@@ -101,7 +102,7 @@ export const ShopContextProvider = (props) => {
     setCartItems((prev) => {
       const updatedCart = [...prev];
       const existingItemIndex = updatedCart.findIndex(
-        (item) => item.eachitem.id === itemToRemove.eachitem.id
+        (item) => item.eachitem.id === itemToRemove
       );
       console.log(existingItemIndex, "Hello");
       if (existingItemIndex !== -1) {

@@ -15,6 +15,7 @@ export default function Card({ data }) {
     setProductDetails({ selected: true, details: data });
   };
 
+
   return (
     <>
       {/*
@@ -35,15 +36,16 @@ export default function Card({ data }) {
       </div>
         */}
 
-      <div onClick={clickHandler} className="card p-5 rounded-md">
-        <div className="card-img flex justify-center items-center">
-          <img className="h-[160px] py-3 object-cover " src={data.img} />
-        </div>
+      <div className="card p-5 rounded-md">
+          <div onClick={clickHandler} className="card-img flex justify-center items-center">
+            <img className="h-[160px] py-3 object-cover " src={data.img} />
+          </div>
 
-        <div className="card-info">
-          <p className="text-title">{data.title}</p>
-          <p className="text-body">{data.description}</p>
-        </div>
+          <div className="card-info">
+            <p onClick={clickHandler} className="cursor-pointer text-title">{data.title}</p>
+            <p className="text-body">{data.description}</p>
+          </div>
+
         <div className="card-footer">
           <span className="text-title">${data.price}</span>
           <div className="card-button" onClick={() => addToCart(data)}>
