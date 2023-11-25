@@ -5,17 +5,27 @@ import { Link } from "react-router-dom";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 
 const ProductDetails = () => {
-  const { productDetails, setProductDetails, addMini, addToCart } =
-    useContext(ShopContext);
-  console.log("details : ", ProductDetails);
+  const {
+    cartItems,
+    productDetails,
+    setProductDetails,
+    addMini,
+    addToCart,
+    removeMini,
+    removeFromCart
+  } = useContext(ShopContext);
+  console.log("details : ", productDetails.details);
 
-  // const removeCom = (data) => {
-  //   if (data.count === 1) {
-  //     removeFromCart(data);
-  //   } else {
-  //     removeMini(data);
-  //   }
-  // };
+  const removeCom = (data) => {
+    if (data.count === 1) {
+      removeFromCart(data.id);
+    } else {
+      removeMini(data.id);
+    }
+  };
+
+  console.log("cartItems : ", cartItems);
+  // const productId = cartItems.
 
   return (
     <main
@@ -64,14 +74,20 @@ const ProductDetails = () => {
                   class="fonts bg-gray-200 py-3 px-10 rounded-md text-center flex justify-center
                gap-[7px] items-center self-center justify-self-center"
                 >
-                  <IoMdAdd className="cursor-pointer" />
+                  <IoMdAdd
+                    className="cursor-pointer hover:text-green-500"
+                    onClick={() => addMini(productDetails.details)}
+                  />
                   <span className="text-[1.4rem] font-semibold">{0}</span>
-                  <IoMdRemove className="cursor-pointer" />
+                  <IoMdRemove
+                    className="cursor-pointer hover:text-red-500"                    
+                    onClick={() => removeCom(productDetails.details)}
+                  />
                 </div>
                 {/* add to cart button */}
                 <button
                   className="px-5 py-3 xl:w-[400px] sm:w-[200px] rounded-md bg-green-600 hover:translate-y-1 transition-all text-white"
-                  // onClick={addToCart(productDetails.details)}
+                  onClick={() => addToCart(productDetails.details)}
                 >
                   Add to Cart
                 </button>
@@ -81,9 +97,7 @@ const ProductDetails = () => {
         </section>
         <section>
           <h1 className="font-semibold pb-2 text-[1.2rem]">Details</h1>
-          <p className="text-gray-700">
-            {productDetails.details.description}
-          </p>
+          <p className="text-gray-700">{productDetails.details.description}</p>
         </section>
         <section className="p-4">
           <h1 className="sm:text-[1.7rem] pb-10 text-[1.5rem]">

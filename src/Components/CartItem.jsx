@@ -15,11 +15,13 @@ const CartItem = ({ data }) => {
 
   const removeCom = (data) => {
     if (data.count === 1) {
-      removeFromCart(data);
+      removeFromCart(data.eachitem.id);
     } else {
-      removeMini(data);
+      removeMini(data.eachitem.id);
     }
   };
+
+  console.log('data : ', data);
 
   useEffect(() => {}, [cartItems]);
 
@@ -41,7 +43,7 @@ const CartItem = ({ data }) => {
       <th class="p-2 fonts fonts font-medium md:px-2 md:py-4 whitespace-nowrap text-center">
         ${data.eachitem.price}
       </th>
-      <td class="p-2 fonts text-center md:px-2 text-center flex justify-center gap-[7px] pt-[35px] items-center self-center justify-self-center">
+      <td class="p-2 fonts text-center md:px-2 flex justify-center gap-[7px] pt-[35px] items-center self-center justify-self-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           onClick={() => removeCom(data)}
@@ -56,7 +58,7 @@ const CartItem = ({ data }) => {
         <span>{data.count}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          onClick={() => addMini(data)}
+          onClick={() => addMini(data.eachitem)}
           className="cursor-pointer w-[15px] h-[15px]"
           viewBox="0 0 24 24"
         >
